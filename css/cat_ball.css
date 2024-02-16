@@ -1,0 +1,68 @@
+
+.balls_cat{
+    float: left;
+    height: 80%;
+    width: 80%;
+}
+
+@keyframes slide-in{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}
+
+@keyframes bounces {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(80%);
+    }
+}
+
+.category{
+    height: 100px;
+    width: 50%;
+    transition: transform 2s ease 0s;
+}
+
+.category:hover {
+    transform: translateX(50%);
+    .ball{
+    animation:
+      bounces 300ms
+      alternate infinite
+      cubic-bezier(.2, .65, .6, 1);
+}
+}
+
+.cat{
+    float: left;
+    background-color: bisque;
+    width: 70%;
+    text-align: center;
+    height: 80px;
+}
+
+.cat p {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #442c1e;
+}
+.ball {
+    float: right;
+    height: 80px;
+    width: 80px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #985632;
+}
+
+footer{
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+}

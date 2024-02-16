@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+  }
+body {
+    background-color: rgb(234, 255, 255);
+    
+}
+
+.box_for_ball {
+    display: grid;
+    place-items: center;
+    height: 400px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(228, 182, 125);
+}
+.balls{
+    height: 80%;
+    width: 80%;
+    display: grid;
+    place-items: center;
+}
+
+@keyframes slide-in{
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    
+    50% {
+        transform: translate(50%, -100%);
+    }
+    
+    100% {
+        transform: translate(100%, 0%);
+    }
+}
+
+.ball {
+    height: 80px;
+    width: 80px;
+    margin-left: 0%;
+    border-radius: 50%;
+    background-color: #985632;
+    
+}
+.one{
+    grid-column: 1;
+}
+.two{
+    grid-column: 2;
+}
+.three{
+    grid-column: 3;
+}
+.balls:hover{
+    .ball {
+        animation:
+          bounce alternate infinite
+          cubic-bezier(.2, .65, .6, 1);
+      }
+      .ball.one {        
+        animation-duration: 500ms;
+      }
+      .ball.two {        
+        animation-duration: 700ms;
+      }
+      .ball.three {       
+        animation-duration: 1000ms;
+      }
+    }
+    
